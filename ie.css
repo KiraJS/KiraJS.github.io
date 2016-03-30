@@ -1,0 +1,7 @@
+p.vertical {
+  writing-mode: tb-rl;
+  filter: flipH flipV;
+}
+thead th {
+  height: 70px;
+}
