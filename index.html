@@ -1,190 +1,42 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" ng-app="mailBoxApp">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>GETTING STARTED WITH BRACKETS</title>
-  <meta name="description" content="An interactive getting started guide for Brackets.">
-  <link rel="stylesheet" href="style.css">
-  <!--[if lte IE 8]><link href="ie.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="app.css">
 </head>
-
 <body>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-        <th>
-          <p class="vertical">Title</p>
-        </th>
-
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <th>Row</th>
-        <td>1</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-        <td>7</td>
-        <td>8</td>
-        <td>9</td>
-        <td>10</td>
-      </tr>
-
-    </tbody>
-  </table>
-
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a ui-sref="incoming" class="navbar-brand" href="#">MailBox</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active">
+            <a ui-sref="incoming">Входящие</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="outgoing">Исходящие</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="users">Контакты</a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+         <div ui-view></div>
+      </div>
+    </div>
+  </div>
+  <script src="libs.js"></script>
+  <script src="app.js"></script>
 </body>
-
 </html>
